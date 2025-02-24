@@ -17,7 +17,7 @@ class QueryAgentInputSchema(BaseIOSchema):
 
 query_agent = BaseAgent(
     BaseAgentConfig(
-        client=instructor.from_openai(openai.OpenAI(api_key=ChatConfig.api_key)),
+        client=instructor.from_openai(openai.OpenAI(api_key=ChatConfig.api_key, base_url=ChatConfig.base_url)),
         model=ChatConfig.model,
         system_prompt_generator=SystemPromptGenerator(
             background=[

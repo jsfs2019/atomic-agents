@@ -17,6 +17,7 @@ class ChatConfig:
 
     api_key: str = get_api_key()  # This becomes a class variable
     model: str = "gpt-4o-mini"
+    base_url: str = "https://dashscope.aliyuncs.com/compatible-mode/v1"
     exit_commands: Set[str] = frozenset({"/exit", "/quit"})
 
     def __init__(self):
